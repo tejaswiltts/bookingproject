@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title> New booking</title>
+</head>
+<body>
+    <div align="center">
+        <h1> New booking</h1>
+        <br />
+        <form action="#" th:action="@{/save}" th:object="${booking}"
+            method="post">
+ 
+            <table border="0" cellpadding="10">
+                 
+                 
+                  <tr>
+                    <td>BOOKING ID:</td>
+                    <td><input type="text" th:field="*{Id}" /></td>
+                </tr>
+                 
+                 
+                 
+                <tr>
+                    <td>CAR ID:</td>
+                    <td><input type="text" th:field="*{car_id}" /></td>
+                </tr>
+                <tr>
+                    <td>EMAIL ID:</td>
+                    <td><input type="text" th:field="*{email_id}" /></td>
+                </tr>
+                <tr>
+                    <td>BOOKING DATE:</td>
+                    <td><input type="text" th:field="*{booking_date}" /></td>
+                </tr>
+                <tr>
+                    <td>DAYS:</td>
+                    <td><input type="text" th:field="*{many_days}" /></td>
+                </tr> 
+                <tr>
+                    <td>STATUS</td>
+                    <td><input type="text" th:field="*{status}" /></td>
+                </tr>                           
+                <tr>
+                    <td colspan="2"><button type="submit">Save</button> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
